@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101010">
+  <title>TDS SHOP — Utvalt för din vardag</title>
+  <meta name="description" content="Upptäck kläder, elektronik, skor och tjänster hos TDS SHOP.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="announcement">VÄLKOMMEN TILL TDS SHOP <span>—</span> UTVALT. MODERNT. ENKELT.</div>
+  <header class="header">
+    <a class="logo" href="#" aria-label="TDS SHOP startsida">TDS<span>.</span>SHOP</a>
+    <nav class="desktop-nav" aria-label="Huvudmeny">
+      <a href="#shop" data-nav="Alla">Alla produkter</a>
+      <a href="#shop" data-nav="Kläder">Kläder</a>
+      <a href="#shop" data-nav="Elektronik">Elektronik</a>
+      <a href="#shop" data-nav="Skor">Skor</a>
+      <a href="#shop" data-nav="Tjänster">Tjänster</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-btn" id="search-focus" aria-label="Sök"><span class="search-icon"></span></button>
+      <button class="cart-button" id="cart-open" aria-label="Öppna kundvagn">Kundvagn <span id="cart-count">0</span></button>
+      <button class="menu-btn" id="menu-toggle" aria-label="Öppna meny">☰</button>
+    </div>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">UPPTÄCK DIN NYA FAVORIT</p>
+        <h1>Mer stil.<br><em>Mer möjligheter.</em></h1>
+        <p class="hero-text">En destination för genomtänkt stil, smart teknik och tjänster som förenklar vardagen.</p>
+        <a class="primary-btn" href="#shop">HANDLA NU <span>↗</span></a>
+        <div class="hero-note"><span class="note-line"></span> EN NY SHOPPINGUPPLEVELSE</div>
+      </div>
+      <div class="hero-visual">
+        <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=1300&q=85" alt="Utvalda modeplagg i en modern miljö">
+        <div class="hero-stamp">TDS<br>EDIT</div>
+        <div class="hero-caption">THE EVERYDAY<br>UPGRADE — 01/04</div>
+      </div>
+    </section>
+
+    <section class="category-strip" aria-label="Produktkategorier">
+      <button class="category-tile active" data-category="Alla"><span>01</span><strong>Allt</strong><b>↗</b></button>
+      <button class="category-tile" data-category="Kläder"><span>02</span><strong>Kläder</strong><b>↗</b></button>
+      <button class="category-tile" data-category="Elektronik"><span>03</span><strong>Elektronik</strong><b>↗</b></button>
+      <button class="category-tile" data-category="Skor"><span>04</span><strong>Skor</strong><b>↗</b></button>
+      <button class="category-tile" data-category="Tjänster"><span>05</span><strong>Tjänster</strong><b>↗</b></button>
+    </section>
+
+    <section class="shop-section" id="shop">
+      <div class="section-heading">
+        <div><p class="eyebrow">VÅRT UTVALDA SORTIMENT</p><h2>Hitta något <em>extra.</em></h2></div>
+        <p class="section-intro">Favoriter för vardagen. Utvalda produkter och tjänster på ett och samma ställe.</p>
+      </div>
+      <div class="shop-controls">
+        <div class="filters" id="filters">
+          <button class="filter active" data-category="Alla">Alla</button>
+          <button class="filter" data-category="Kläder">Kläder</button>
+          <button class="filter" data-category="Elektronik">Elektronik</button>
+          <button class="filter" data-category="Skor">Skor</button>
+          <button class="filter" data-category="Tjänster">Tjänster</button>
+        </div>
+        <label class="search-box"><span class="search-icon"></span><input id="search" type="search" placeholder="Sök produkter..." aria-label="Sök produkter"></label>
+      </div>
+      <div class="product-grid" id="product-grid"></div>
+      <p class="empty-state" id="empty-state" hidden>Inga produkter hittades. Prova en annan sökning.</p>
+    </section>
+
+    <section class="service-banner">
+      <div><p class="eyebrow">MER ÄN BARA PRODUKTER</p><h2>Tjänster som gör<br><em>skillnad.</em></h2></div>
+      <p>Upptäck hjälp och tjänster som passar din vardag. Vi bygger vidare på utbudet löpande.</p>
+      <a href="#shop" class="light-btn" data-service-link>UTFORSKA TJÄNSTER ↗</a>
+    </section>
+    <section class="promise">
+      <div><span>01 /</span><strong>Utvalt sortiment</strong><p>Produkter för stil och funktion.</p></div>
+      <div><span>02 /</span><strong>Enkel shopping</strong><p>Hitta det du söker utan krångel.</p></div>
+      <div><span>03 /</span><strong>SEK-priser</strong><p>Tydliga priser i svenska kronor.</p></div>
+    </section>
+  </main>
+  <footer><a class="logo" href="#">TDS<span>.</span>SHOP</a><p>En modern destination för allt det där lilla extra.</p><small>© <span id="year"></span> TDS SHOP. Alla rättigheter förbehållna.</small></footer>
+
+  <div class="overlay" id="overlay"></div>
+  <aside class="cart-drawer" id="cart-drawer" aria-label="Kundvagn" aria-hidden="true">
+    <div class="drawer-head"><div><p class="eyebrow">DIN BESTÄLLNING</p><h2>Kundvagn <span id="drawer-count">(0)</span></h2></div><button class="close-btn" id="cart-close" aria-label="Stäng">×</button></div>
+    <div class="cart-items" id="cart-items"><p class="cart-empty">Din kundvagn är tom.</p></div>
+    <div class="drawer-bottom"><div class="subtotal"><span>Delsumma</span><strong id="subtotal">0 kr</strong></div><p>Frakt och eventuella avgifter beräknas i nästa steg.</p><button class="checkout-btn" id="checkout">TILL KASSAN <span>↗</span></button><small>Demo: ingen betalning genomförs ännu.</small></div>
+  </aside>
+  <dialog id="checkout-dialog">
+    <button class="close-btn dialog-close" id="checkout-close" aria-label="Stäng">×</button>
+    <p class="eyebrow">NÄSTA STEG</p><h2>Snart är du <em>klar.</em></h2>
+    <p>Det här är en första demo av TDS SHOP. För att ta emot riktiga beställningar behöver vi koppla på en säker betaltjänst, frakt och orderhantering.</p>
+    <button class="primary-btn" id="continue-shopping">FORTSÄTT HANDLA ↗</button>
+  </dialog>
+  <script src="app.js"></script>
+</body>
+</html>
